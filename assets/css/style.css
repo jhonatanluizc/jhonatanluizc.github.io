@@ -1,0 +1,558 @@
+@import url(/assets/css/fonts.css);
+/* Reset */
+
+:root {
+    --background-primary: #212529;
+    --background-secondary: #343A40;
+    --font-primary: #F8F9FA;
+    --font-secondary: #6C757D;
+    --font-name: 72px;
+    --font-title: 48px;
+    --font-subtitle: 32px;
+    --font-description: 24px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0
+}
+
+body {
+    background-color: var(--background-primary);
+    color: var(--font-primary);
+    font-family: 'Droid Sans';
+}
+
+.container-flex {
+    width: 100%;
+    display: flex;
+}
+
+.session {
+    display: flex;
+    padding: 30px 8.3% 30px 8.3%;
+    flex-direction: column;
+}
+
+/* ABOUT */
+
+.about {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: normal;
+    padding: 0px 8.3% 0px 8.3%;
+}
+
+.about .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about .about-content .about-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about .about-content .about-body .about-title {
+    font-size: var(--font-name);
+}
+
+.about .about-content .about-body .about-subtitle {
+    font-size: var(--font-title);
+}
+
+.about .about-content .about-body .about-description {
+    font-size: var(--font-subtitle);
+}
+
+.about .about-content .about-profile {
+    width: 400px;
+}
+
+.about .about-content .about-profile img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ABOUT */
+
+/* SESSION */
+
+.bg-black {
+    background-color: var(--background-primary);
+}
+
+.bg-gray {
+    background-color: var(--background-secondary);
+}
+
+.session .content .content-head {
+    display: flex;
+}
+
+/* SESSION */
+
+/* SOCIAL */
+
+.session .content .content-head .content-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-title);
+    padding: 50px;
+}
+
+.session.social .content .content-body {
+    padding: 30px 0 30px 0;
+}
+
+.session.social .content .content-body .social-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.session.social .content .content-body .social-card {
+    width: 465px;
+    height: 210px;
+    border-radius: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.session.social .content .content-body .social-card .social-card-icon {
+    height: 110px;
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.session.social .content .content-body .social-card .social-card-icon img {
+    height: 100%;
+}
+
+.session.social .content .content-body .social-card .social-card-content {
+    width: calc(100% - 150px);
+}
+
+.session.social .content .content-body .social-card .social-card-content .social-card-title {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.session.social .content .content-body .social-card .social-card-content .social-card-description {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+/* SKILL */
+
+.session.skill .content .content-body {
+    padding: 30px 0 30px 0;
+}
+
+.session.skill .content .content-body .skill-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.session.skill .content .content-body .skill-card {
+    width: 465px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.session.skill .content .content-body .skill-card .skill-card-icon {
+    height: 110px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.session.skill .content .content-body .skill-card .skill-card-icon img {
+    height: 100%;
+}
+
+.session.skill .content .content-body .skill-card .skill-card-content {
+    width: calc(100% - 150px);
+}
+
+.session.skill .content .content-body .skill-card .skill-card-content .skill-card-title {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    text-align: left;
+    padding: 8px 0 8px 10px;
+}
+
+.session.skill .content .content-body .skill-card .skill-card-content .skill-card-description {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    text-align: left;
+    padding: 8px 0 8px 10px;
+}
+
+/* SKILL */
+
+/* FORMATION */
+
+.session .content .content-head .content-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-title);
+    padding: 50px;
+}
+
+.session.formation .content .content-body {
+    padding: 30px 0 30px 0;
+}
+
+.session.formation .content .content-body .formation-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.session.formation .content .content-body .formation-card {
+    width: 700px;
+    height: 250px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    margin: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-header .formation-card-title {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    color: var(--font-secondary);
+    padding: 0px 35px 0px 0px;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-header .formation-card-icon {
+    width: 72px;
+    height: 72px;
+    padding: 0px 0px 0px 35px;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-icon img {
+    height: 100%;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-body {
+    width: 100%;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-body .formation-card-content {
+    padding: 0 35px 0 35px;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-body .formation-card-content .formation-card-title {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    text-align: left;
+    padding: 10px 0 10px 0;
+}
+
+.session.formation .content .content-body .formation-card .formation-card-body .formation-card-content .formation-card-description {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--font-description);
+    text-align: left;
+    padding: 10px 0 10px 0;
+}
+
+/* FORMATION */
+
+/* EXPERIENCE */
+
+.session.experience .content .content-body .experience-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.session.experience .content .content-body .experience-card {
+    width: 1274px;
+    height: 400px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-header {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-header .formation-card-title {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    padding: 0px 35px;
+    color: var(--font-secondary);
+}
+
+.session.experience .content .content-body .experience-card .experience-card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-body .experience-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 35px 0px 0px;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-body .experience-card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 250px;
+    height: 250px;
+    padding: 0px 35px;
+}
+
+.session.experience .content .content-body .experience-card .experience-dynamic-card {
+    width: 100%;
+}
+
+.hide {
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-body .experience-card-image img {
+    width: 75%;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-body .experience-card-content .experience-card-title {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font-subtitle);
+    padding-bottom: 20px;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-body .experience-card-content .experience-card-description {
+    font-family: "Droid Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--font-description);
+}
+
+.session.experience .content .content-body .experience-card .experience-card-footer {
+    width: 100%;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-footer .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-footer .carousel-indicators .indicator {
+    width: 11px;
+    height: 11px;
+    background-color: var(--font-secondary);
+    border-radius: 100%;
+    margin: 4px;
+    transition: all .3s ease-in-out;
+    border: var(--font-secondary) solid 2px;
+}
+
+.session.experience .content .content-body .experience-card .experience-card-footer .carousel-indicators .indicator.active {
+    width: 11px;
+    height: 11px;
+    background-color: var(--font-primary);
+    border: var(--font-primary) solid 2px;
+}
+
+/* EXPERIENCE */
+
+/* RESPONSIBLE */
+
+@media (max-width: 1600px) {
+    :root {
+        --font-name: 60px;
+        --font-title: 36px;
+        --font-subtitle: 30px;
+        --font-description: 24px;
+    }
+    .about .about-content .about-profile {
+        width: 360px;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --font-name: 48px;
+        --font-title: 30px;
+        --font-subtitle: 24px;
+        --font-description: 18px;
+    }
+    .about .about-content .about-profile {
+        width: 250px;
+    }
+    .about {
+        padding: 0px 5% 0px 5%;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-body .experience-card-image {
+        padding: 0;
+        width: 200px;
+        height: 200px;
+    }
+    .session.experience .content .content-body .experience-card {
+        height: 350px;
+    }
+}
+
+@media (max-width: 776px) {
+    :root {
+        --font-name: 42px;
+        --font-title: 28px;
+        --font-subtitle: 22px;
+        --font-description: 16px;
+    }
+    .about .about-content .about-profile {
+        display: none;
+    }
+    .about .about-content .about-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .about .about-content .about-body .about-title {
+        padding: 20px 0;
+    }
+    .about .about-content .about-body .about-subtitle {
+        padding: 20px 0;
+    }
+    .about .about-content .about-body .about-description {
+        padding: 20px 0;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-footer {
+        padding: 20px 0 0 0;
+    }
+    .session.experience .content .content-body .experience-card {
+        height: 100%;
+        padding: 20px;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-body .experience-card-content {
+        padding: 0;
+    }
+    .session.social .content .content-body .social-card {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .session.social .content .content-body .social-card .social-card-content {
+        width: calc(100% - 100px);
+    }
+    .session.social .content .content-body .social-card .social-card-icon {
+        height: 80px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .session.skill .content .content-body .skill-card .skill-card-icon {
+        height: 80px;
+        width: 130px;
+    }
+    .session .content .content-head .content-title {
+        padding: 25px;
+    }
+    .session.skill .content .content-body, .session.formation .content .content-body, .session.social .content .content-body {
+        padding: 0 0 30px 0;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-header .formation-card-title {
+        padding: 0;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-body .experience-card-content .experience-card-title {
+        padding: 20px 0;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-body .experience-card-image img {
+        width: 100%;
+    }
+    .session.experience .content .content-body .experience-card .experience-card-body .experience-card-image {
+        padding: 15px;
+        width: 125px;
+        height: 125px;
+    }
+}
+
+
+/* RESPONSIBLE */
