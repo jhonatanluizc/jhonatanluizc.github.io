@@ -37,6 +37,16 @@ body {
     flex-direction: column;
 }
 
+.content {
+    max-width: 1920px;
+}
+
+.session {
+    padding: 30px 8.3% 30px 8.3%;
+    align-content: center;
+    align-items: center;
+}
+
 /* ABOUT */
 
 .about {
@@ -325,7 +335,6 @@ body {
 }
 
 .session.experience .content .content-body .experience-card {
-    width: 1274px;
     height: 400px;
     border-radius: 30px;
     display: flex;
@@ -553,10 +562,13 @@ body {
         height: 125px;
     }
     .session {
-        display: flex;
         padding: 0;
-        flex-direction: column;
     }
+    .session.formation .content .content-body .formation-card,
+    .session.skill .content .content-body .skill-card {
+        width: 100%;
+    }
+    
 }
 
 /* RESPONSIBLE */
