@@ -1,8 +1,14 @@
-Portfolio = {
+'use strict';
 
+/// :: Represents the portifolio app.
+var Portfolio = {
+
+    ///:: Initialize.
     Init: function () {
 
+        /// :: Bind events.
         Portfolio.ExperienceSlide.Bind();
+        Portfolio.Profile.Bind();
     },
 
     /// :: Slide to experience section.
@@ -105,19 +111,33 @@ Portfolio = {
     /// :: Profile section.
     Profile: {
 
-        /// :: Copy email to clipboard.
-        Copy: function () {
+        /// :: Bind profile section.
+        Bind: function () {
 
             /// :: Base.
-            var email = 'jhonatan.sont@gmail.com';
+            var profileEmail = document.querySelector('#profile-social-email');
+
+            /// :: Trigger a click.
+            profileEmail.addEventListener('click', function () {
+
+                /// :: Copy my email.
+                Portfolio.Profile.Copy('E-mail', 'jhonatan.sont@gmail.com');
+
+            });
+        },
+
+        /// :: Copy to clipboard.
+        /// :: @param {string} type - name of the text.
+        /// :: @param {string} text - text to copy.
+        Copy: function (type, text) {
 
             /// :: Copy to clipboard.
-            navigator.clipboard.writeText(email);
+            navigator.clipboard.writeText(text);
 
             /// :: Show a message.
             Swal.fire({
-                title: email,
-                text: 'E-mail copiado para a área de transferência',
+                title: text,
+                text: `${type} copiado para a área de transferência`,
                 icon: 'success',
             })
 

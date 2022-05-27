@@ -10,6 +10,24 @@
 </head>
 
 <style>
+    :root {
+        --background-primary: #212529;
+        --background-secondary: #343A40;
+        --font-primary: #F8F9FA;
+        --font-secondary: #6C757D;
+        --font-name: 72px;
+        --font-title: 48px;
+        --font-subtitle: 32px;
+        --font-description: 24px;
+    }
+
+    .bg-black {
+        background-color: var(--background-primary);
+    }
+
+    .bg-gray {
+        background-color: var(--background-secondary);
+    }
 </style>
 
 <body>
@@ -198,6 +216,48 @@
     -->
 </body>
 
-<script src="./scripts.js"></script>
+<script>
+    'use strict';
+
+    var Scripts = {
+
+        /// :: Initialize all functions.
+        Init: function () {
+
+            Scripts.CodePreview();
+        },
+
+        /// :: Code preview.
+        CodePreview: function () {
+
+            /// :: Base.
+            var codePreview = document.querySelector('.code-preview code pre');
+            var text = codePreview.textContent;
+
+            /// :: Replace class names.
+            text.match(/\.[A-z]* /g).forEach(value => {
+                text = text.replace(value, '<span style="color:#d7ba70">' + value + '</span>');
+            });
+
+            /// :: Replace atributes.
+            text.match(/ \w*: /g).forEach(value => {
+                text = text.replaceAll(value, '<span style="color:#8fd2f8">' + value.replace(':', '<span style="color:#fff">:</span>') + '</span>');
+            });
+
+            /// :: Replace outers characters.
+            text = text.replace(/{/g, '<span style="color:#ffd700">{</span>');
+            text = text.replace(/}/g, '<span style="color:#ffd700">}</span>');
+            text = text.replace(/;/g, '<span style="color:#fff">;</span>');
+
+            /// :: Apply changes.
+            codePreview.innerHTML = text;
+        }
+
+    }
+
+    /// :: Execute initial functions.
+    Scripts.Init();
+
+</script>
 
 </html>
