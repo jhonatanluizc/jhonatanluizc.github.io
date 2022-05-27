@@ -2,10 +2,20 @@
 /* Reset */
 
 :root {
-    --background-primary: #212529;
-    --background-secondary: #343A40;
-    --font-primary: #F8F9FA;
-    --font-secondary: #6C757D;
+    --color-black: #000;
+    --color-white: #fff;
+    --background-primary: #131417;
+    --background-secondary: #2C303A;
+    --background-tertiary: #5A5F73;
+    --font-primary: #FFFFFF;
+    --font-secondary: #C7C9D3;
+    --font-tertiary: #13C0F0;
+    --button-primary: #248C46;
+    --button-secondary: #444857;
+    --button-tertiary: #FFDD40;
+    --button-primary-hover: #47cf73;
+    --button-secondary-hover: #5A5F73;
+    --button-tertiary-hover: #ffd519;
     --font-name: 72px;
     --font-title: 48px;
     --font-subtitle: 32px;
@@ -17,7 +27,8 @@
     margin: 0;
     vertical-align: baseline;
     list-style: none;
-    border: 0
+    border: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -42,9 +53,130 @@ body {
 }
 
 .session {
-    padding: 30px 8.3% 30px 8.3%;
-    align-content: center;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 30px 8.3% 30px 8.3%;
+}
+
+/* PROFILE */
+
+.profile h1 {
+    font-weight: bold;
+    font-size: 38px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.profile h4 {
+    font-weight: lighter;
+    color: #9E9E9E;
+    font-size: 16px;
+}
+
+.profile .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 60px 100px;
+    width: 1200px;
+}
+
+.profile .profile-avatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profile .profile-avatar img {
+    background-color: rgb(39, 39, 39);
+    border: var(--background-tertiary) solid 1px;
+    border-radius: 50%;
+    max-height: 200px;
+    margin-left: 16px;
+}
+
+.profile .profile-info {
+    flex-grow: 1;
+    padding: 0 8%;
+}
+
+.profile .profile-info .profile-theme {
+    background-color: transparent;
+}
+
+.profile .profile-social i {
+    color: var(--font-secondary);
+    margin: 16px;
+}
+
+@media (max-width: 1600px) {}
+
+@media (max-width: 1200px) {
+
+    .profile .profile-content {
+        width: 800px;
+        padding: 30px 50px;
+    }
+
+    .profile .profile-avatar img {
+        max-height: 180px;
+        margin-left: 0;
+    }
+
+    .profile .profile-info {
+        padding: 0px 4%;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .profile .profile-avatar img {
+        max-height: 160px;
+        margin-left: 0;
+    }
+
+    .profile h1 {
+        font-size: 28px;
+    }
+
+    .profile h4 {
+        font-size: 14px;
+    }
+
+    .profile i {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 776px) {
+    .profile .profile-content {
+        border-radius: 0;
+    }
+
+    .profile .profile-info {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .profile .profile-avatar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile .profile-theme {
+        position: absolute;
+        right: 20px;
+    }
 }
 
 /* ABOUT */
@@ -450,6 +582,7 @@ body {
         --font-subtitle: 30px;
         --font-description: 24px;
     }
+
     .about .about-content .about-profile {
         width: 360px;
     }
@@ -462,17 +595,21 @@ body {
         --font-subtitle: 24px;
         --font-description: 18px;
     }
+
     .about .about-content .about-profile {
         width: 250px;
     }
+
     .about {
         padding: 0px 5% 0px 5%;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-body .experience-card-image {
         padding: 0;
         width: 200px;
         height: 200px;
     }
+
     .session.experience .content .content-body .experience-card {
         height: 350px;
     }
@@ -485,9 +622,11 @@ body {
         --font-subtitle: 22px;
         --font-description: 16px;
     }
+
     .about .about-content .about-profile {
         display: none;
     }
+
     .about .about-content .about-body {
         width: 100%;
         display: flex;
@@ -497,22 +636,28 @@ body {
         padding: 20px 0;
         text-align: center;
     }
+
     .about .about-content .about-body .about-title {
         padding: 20px 0;
     }
+
     .about .about-content .about-body .about-subtitle {
         padding: 20px 0;
     }
+
     .about .about-content .about-body .about-description {
         padding: 20px 0;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-footer {
         padding: 20px 0 0 0;
     }
+
     .session.experience .content .content-body .experience-card {
         height: 100%;
         padding: 20px;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-body {
         display: flex;
         flex-direction: column;
@@ -520,55 +665,70 @@ body {
         align-items: center;
         justify-content: flex-start;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-body .experience-card-content {
         padding: 0;
     }
+
     .session.social .content .content-body .social-card {
         width: 100%;
         height: auto;
         padding: 10px;
     }
+
     .session.social .content .content-body .social-card .social-card-content {
         width: calc(100% - 100px);
     }
+
     .session.social .content .content-body .social-card .social-card-icon {
         height: 80px;
         width: 100px;
         display: flex;
         justify-content: center;
     }
+
     .session.skill .content .content-body .skill-card .skill-card-icon {
         height: 80px;
         width: 130px;
     }
+
     .session .content .content-head .content-title {
         padding: 25px;
     }
-    .session.skill .content .content-body, .session.formation .content .content-body, .session.social .content .content-body {
+
+    .session.skill .content .content-body,
+    .session.formation .content .content-body,
+    .session.social .content .content-body {
         padding: 0 0 30px 0;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-header .formation-card-title {
         padding: 0;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-body .experience-card-content .experience-card-title {
         padding: 20px 0;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-body .experience-card-image img {
         width: 100%;
     }
+
     .session.experience .content .content-body .experience-card .experience-card-body .experience-card-image {
         padding: 15px;
         width: 125px;
         height: 125px;
     }
+
     .session {
         padding: 0;
     }
+
     .session.formation .content .content-body .formation-card,
     .session.skill .content .content-body .skill-card {
         width: 100%;
     }
-    
+
 }
 
 /* RESPONSIBLE */
