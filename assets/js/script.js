@@ -100,6 +100,28 @@ Portfolio = {
 
         },
 
+    },
+
+    /// :: Profile section.
+    Profile: {
+
+        /// :: Copy email to clipboard.
+        Copy: function () {
+
+            /// :: Base.
+            var email = 'jhonatan.sont@gmail.com';
+
+            /// :: Copy to clipboard.
+            navigator.clipboard.writeText(email);
+
+            /// :: Show a message.
+            Swal.fire({
+                title: email,
+                text: 'E-mail copiado para a área de transferência',
+                icon: 'success',
+            })
+
+        }
     }
 
 }
