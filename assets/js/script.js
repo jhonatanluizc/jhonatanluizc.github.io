@@ -7,7 +7,7 @@ var Portfolio = {
     Init: function () {
 
         /// :: Bind events.
-        Portfolio.ExperienceSlide.Bind();
+        /// :: Portfolio.ExperienceSlide.Bind();
         Portfolio.Profile.Bind();
     },
 
