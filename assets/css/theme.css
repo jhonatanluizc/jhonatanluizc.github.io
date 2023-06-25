@@ -1,0 +1,15 @@
+
+:root {
+    --background-primary: #131417;
+    --background-secondary: #2C303A;
+    --background-tertiary: #5A5F73;
+    --font-primary: #E6E6E6;
+    --font-secondary: #C7C9D3;
+    --font-tertiary: #13C0F0;
+    --button-primary: #248C46;
+    --button-secondary: #444857;
+    --button-tertiary: #FFDD40;
+    --button-primary-hover: #47cf73;
+    --button-secondary-hover: #5A5F73;
+    --button-tertiary-hover: #ffd519;
+}
