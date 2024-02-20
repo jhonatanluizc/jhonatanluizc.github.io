@@ -62,10 +62,20 @@
     box-sizing: border-box;
 }
 
+
+/* default */
+
 body {
     background-color: var(--background-primary);
     color: var(--font-primary);
     font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
 }
 
 .container-flex {
@@ -93,7 +103,34 @@ body {
     padding: 30px 8.3% 30px 8.3%;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: var(--font-title);
+    padding: 32px 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* default */
+
 /* PROFILE */
+
+.profile-content {
+    background-color: var(--background-primary);
+}
 
 .profile h1 {
     font-weight: bold;
@@ -155,6 +192,13 @@ body {
     margin: 16px;
 }
 
+
+@media (max-width: 1920px) {
+    .container {
+        padding: 0px 8.3% 0px 8.3%;
+    }
+}
+
 @media (max-width: 1600px) {}
 
 @media (max-width: 1200px) {
@@ -187,6 +231,7 @@ body {
 }
 
 @media (max-width: 776px) {
+
     .profile .profile-content {
         border-radius: 0;
     }
@@ -206,50 +251,6 @@ body {
         right: 20px;
     }
 }
-
-/* ABOUT */
-
-.about {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    padding: 0px 8.3% 0px 8.3%;
-}
-
-.about .about-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.about .about-content .about-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.about .about-content .about-body .about-title {
-    font-size: var(--font-giant);
-}
-
-.about .about-content .about-body .about-subtitle {
-    font-size: var(--font-title);
-}
-
-.about .about-content .about-body .about-description {
-    font-size: var(--font-subtitle);
-}
-
-.about .about-content .about-profile {
-    width: 400px;
-}
-
-.about .about-content .about-profile img {
-    width: 100%;
-    height: 100%;
-}
-
-/* ABOUT */
 
 /* SESSION */
 
@@ -789,11 +790,7 @@ body {
 
 @media (max-width: 1200px) {
 
-    .about .about-content .about-profile {
-        width: 250px;
-    }
-
-    .about {
+    .container {
         padding: 0px 5% 0px 5%;
     }
 
@@ -810,30 +807,8 @@ body {
 
 @media (max-width: 776px) {
 
-    .about .about-content .about-profile {
-        display: none;
-    }
-
-    .about .about-content .about-body {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    .about .about-content .about-body .about-title {
-        padding: 20px 0;
-    }
-
-    .about .about-content .about-body .about-subtitle {
-        padding: 20px 0;
-    }
-
-    .about .about-content .about-body .about-description {
-        padding: 20px 0;
+    .container {
+        padding: 0px 2.5% 0px 2.5%;
     }
 
     .session.experience .content .content-body .experience-card .experience-card-footer {
@@ -919,3 +894,56 @@ body {
 }
 
 /* RESPONSIBLE */
+
+/* footer */
+
+.footer {
+    padding: 64px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-primary);
+}
+
+/* footer */
+
+/* about */
+
+.card {
+    border-radius: 16px;
+    padding: 32px;
+    background-color: var(--background-primary);
+    margin-top: 8px;
+    text-align: justify;
+}
+
+/* about */
+
+/*skills*/
+
+.skills-card {
+    border-radius: 16px;
+    padding: 16px;
+    background-color: var(--background-primary);
+    margin: 8px;
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.skills-card img {
+    height: 64px;
+    width: 64px;
+}
+
+.skills-card span {
+    position: absolute;
+    top: 100px;
+    font-size: 14px;
+    text-align: center;
+    text-wrap: nowrap;
+    /* font-weight: 100; */
+}
+
+/*skills*/
