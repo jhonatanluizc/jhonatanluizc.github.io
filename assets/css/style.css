@@ -423,7 +423,8 @@ section .title {
 
 .session.formation .content .content-body .formation-card {
     width: 700px;
-    height: 250px;
+    padding: 32px 0px;
+    height: auto;
     border-radius: 30px;
     display: flex;
     justify-content: space-evenly;
